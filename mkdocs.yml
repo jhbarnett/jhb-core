@@ -1,0 +1,11 @@
+site_name: jhb-core
+site_description: Its all about a Weissman score > 5.0
+repo_url: https://github.com/jhbarnett/jhb-core
+site_dir: site
+copyright: Copyright &copy; 2018, <a href="https://github.com/jhbarnett">jhbarnett</a>.
+
+pages:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
+    - Users: 'api/users.md'
