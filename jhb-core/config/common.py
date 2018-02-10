@@ -23,7 +23,11 @@ class Common(Configuration):
         'django_filters',            # for filtering rest endpoints
 
         # Your apps
-        'jhb-core.users',
+        'api.apps.ApiConfig',  # PRIVATE RESTFUL API
+        'core.apps.CoreConfig',  # MODEL & CONTROLLER (DB, COMMANDS, SERVICES, UTILS, ...)
+        'public.apps.PublicConfig',  # PUBLIC API // JAHUBA.COM
+        'integrations.apps.IntegrationsConfig',  # 3RD PARTY SERVICES (i.e. IFTTT)
+        'portfolio.apps.PortfolioConfig'  # PORTFOLIO & ACCOUNT MANAGEMENT
 
     )
 
@@ -178,9 +182,6 @@ class Common(Configuration):
             },
         }
     }
-
-    # Custom user app
-    AUTH_USER_MODEL = 'users.User'
 
     # Django Rest Framework
     REST_FRAMEWORK = {
